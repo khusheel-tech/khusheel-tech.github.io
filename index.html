@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Khusheel Tech — Mobile apps built for everyday life."/>
+  <meta name="description" content="Khusheel Tech — simple, useful mobile apps crafted with Flutter for Android &amp; iOS."/>
   <meta name="theme-color" content="#18934D"/>
   <title>Khusheel Tech — Developer</title>
 
@@ -15,14 +15,14 @@
   <!-- Social preview (PNG — SVG isn't rendered by social scrapers) -->
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Khusheel Tech — Mobile Developer"/>
-  <meta property="og:description" content="Building simple, useful mobile apps for everyday life. Available on Android &amp; iOS."/>
+  <meta property="og:description" content="Building simple, useful mobile apps for everyday life — crafted with Flutter for Android &amp; iOS."/>
   <meta property="og:image" content="https://khusheel-tech.github.io/assets/social/og-card.png"/>
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
   <meta property="og:url" content="https://khusheel-tech.github.io/"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Khusheel Tech — Mobile Developer"/>
-  <meta name="twitter:description" content="Simple, useful mobile apps for everyday life. Android &amp; iOS."/>
+  <meta name="twitter:description" content="Simple, useful mobile apps — crafted with Flutter for Android &amp; iOS."/>
   <meta name="twitter:image" content="https://khusheel-tech.github.io/assets/social/og-card.png"/>
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -89,6 +89,16 @@
       font-size:11px;font-weight:700;color:rgba(255,255,255,.9);
       letter-spacing:1px;text-transform:uppercase;
       margin-bottom:20px;position:relative;z-index:1;
+    }
+    .hero-tech{
+      display:flex;gap:10px;justify-content:center;flex-wrap:wrap;
+      margin-top:22px;position:relative;z-index:1;
+    }
+    .tech-pill{
+      background:rgba(255,255,255,.15);
+      border:1px solid rgba(255,255,255,.28);
+      border-radius:99px;padding:7px 18px;
+      font-size:13px;font-weight:700;color:#fff;
     }
 
     /* ── CONTENT ── */
@@ -214,7 +224,12 @@
   <div class="brand-icon">KT</div>
   <div class="hero-tag">Mobile Developer</div>
   <h1>Khusheel Tech</h1>
-  <p>Building simple, useful mobile apps for everyday life. Available on Android &amp; iOS.</p>
+  <p>Building simple, useful mobile apps for everyday life — crafted with Flutter.</p>
+  <div class="hero-tech">
+    <span class="tech-pill">Flutter</span>
+    <span class="tech-pill">Android</span>
+    <span class="tech-pill">iOS</span>
+  </div>
 </div>
 
 <!-- CONTENT -->
