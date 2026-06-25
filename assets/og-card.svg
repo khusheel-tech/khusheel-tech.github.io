@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" font-family="Montserrat, Arial, Helvetica, sans-serif" role="img" aria-label="Khusheel Tech — Mobile Developer">
+  <title>Khusheel Tech</title>
+  <defs>
+    <linearGradient id="og" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#18934D"/>
+      <stop offset="1" stop-color="#0d6e39"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#og)"/>
+  <circle cx="1080" cy="90" r="300" fill="#ffffff" fill-opacity="0.06"/>
+  <circle cx="120" cy="560" r="180" fill="#ffffff" fill-opacity="0.05"/>
+  <g transform="translate(150,175)">
+    <rect width="160" height="160" rx="38" fill="#ffffff" fill-opacity="0.15" stroke="#ffffff" stroke-opacity="0.28" stroke-width="3"/>
+    <text x="80" y="86" text-anchor="middle" dominant-baseline="central" font-size="74" font-weight="900" fill="#ffffff" letter-spacing="2">KT</text>
+  </g>
+  <text x="360" y="250" font-size="34" font-weight="700" fill="#ffffff" fill-opacity="0.85" letter-spacing="6">MOBILE DEVELOPER</text>
+  <text x="356" y="340" font-size="92" font-weight="900" fill="#ffffff" letter-spacing="-1">Khusheel Tech</text>
+  <text x="360" y="400" font-size="30" font-weight="500" fill="#ffffff" fill-opacity="0.82">Simple, useful mobile apps for everyday life · Android &amp; iOS</text>
+</svg>
