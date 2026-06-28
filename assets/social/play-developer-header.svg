@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4096 2304" font-family="Montserrat, Arial, Helvetica, sans-serif" role="img" aria-label="Khusheel Tech Developer Header">
+  <title>Khusheel Tech Developer Header</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#18934D"/>
+      <stop offset="1" stop-color="#0a5c2f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="4096" height="2304" fill="url(#bg)"/>
+
+  <!-- Decorative circles (same pattern as LinkedIn banners) -->
+  <circle cx="3900" cy="-200" r="1400" fill="#ffffff" fill-opacity="0.05"/>
+  <circle cx="3200" cy="2600" r="1200" fill="#ffffff" fill-opacity="0.04"/>
+  <circle cx="180"  cy="2500" r="900"  fill="#ffffff" fill-opacity="0.04"/>
+
+  <!-- All content centered, canvas center x=2048 -->
+
+  <!-- Role label -->
+  <text x="2048" y="880" text-anchor="middle" font-size="72" font-weight="700" fill="#ffffff" fill-opacity="0.70" letter-spacing="22">MOBILE DEVELOPER</text>
+
+  <!-- Name -->
+  <text x="2048" y="1160" text-anchor="middle" font-size="300" font-weight="900" fill="#ffffff" letter-spacing="-6">Khusheel Tech</text>
+
+  <!-- Pills centered — total width: 350+48+440+48+560 = 1446, start = 2048-723 = 1325 -->
+  <!-- Flutter: x=1325, w=350 -->
+  <rect x="1325" y="1260" width="350" height="110" rx="55" fill="#ffffff" fill-opacity="0.18" stroke="#ffffff" stroke-opacity="0.26" stroke-width="2"/>
+  <text x="1500" y="1315" text-anchor="middle" dominant-baseline="central" font-size="52" font-weight="700" fill="#ffffff">Flutter</text>
+
+  <!-- Native iOS: x=1723, w=440 -->
+  <rect x="1723" y="1260" width="440" height="110" rx="55" fill="#ffffff" fill-opacity="0.18" stroke="#ffffff" stroke-opacity="0.26" stroke-width="2"/>
+  <text x="1943" y="1315" text-anchor="middle" dominant-baseline="central" font-size="52" font-weight="700" fill="#ffffff">Native iOS</text>
+
+  <!-- Native Android: x=2211, w=560 -->
+  <rect x="2211" y="1260" width="560" height="110" rx="55" fill="#ffffff" fill-opacity="0.18" stroke="#ffffff" stroke-opacity="0.26" stroke-width="2"/>
+  <text x="2491" y="1315" text-anchor="middle" dominant-baseline="central" font-size="52" font-weight="700" fill="#ffffff">Native Android</text>
+
+</svg>
