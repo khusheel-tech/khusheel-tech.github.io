@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396" font-family="Montserrat, Arial, Helvetica, sans-serif" role="img" aria-label="Khusheel Tech Personal Banner">
+  <title>Khusheel Tech Personal Banner</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#18934D"/>
+      <stop offset="1" stop-color="#0a5c2f"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1584" height="396" fill="url(#bg)"/>
+
+  <circle cx="1480" cy="-60" r="360" fill="#ffffff" fill-opacity="0.05"/>
+  <circle cx="1260" cy="480" r="300" fill="#ffffff" fill-opacity="0.04"/>
+  <circle cx="80"   cy="420" r="240" fill="#ffffff" fill-opacity="0.04"/>
+
+  <!-- All content right-aligned, right margin 140px → anchor x = 1584-140 = 1444 -->
+
+  <!-- Role label -->
+  <text x="1444" y="146" text-anchor="end" font-size="18" font-weight="700" fill="#ffffff" fill-opacity="0.70" letter-spacing="6">MOBILE DEVELOPER</text>
+
+  <!-- Name -->
+  <text x="1444" y="224" text-anchor="end" font-size="82" font-weight="900" fill="#ffffff" letter-spacing="-2">Khusheel Tech</text>
+
+  <!-- Pills — right-aligned: lay out right-to-left -->
+  <!-- Native Android: width 192, right edge 1444 → left = 1252 -->
+  <rect x="1252" y="258" width="192" height="40" rx="20" fill="#ffffff" fill-opacity="0.18" stroke="#ffffff" stroke-opacity="0.28" stroke-width="2"/>
+  <text x="1348" y="278" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="700" fill="#ffffff">Native Android</text>
+
+  <!-- Native iOS: width 148, gap 14, right edge 1252-14=1238 → left = 1090 -->
+  <rect x="1090" y="258" width="148" height="40" rx="20" fill="#ffffff" fill-opacity="0.18" stroke="#ffffff" stroke-opacity="0.28" stroke-width="2"/>
+  <text x="1164" y="278" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="700" fill="#ffffff">Native iOS</text>
+
+  <!-- Flutter: width 122, gap 14, right edge 1090-14=1076 → left = 954 -->
+  <rect x="954" y="258" width="122" height="40" rx="20" fill="#ffffff" fill-opacity="0.18" stroke="#ffffff" stroke-opacity="0.28" stroke-width="2"/>
+  <text x="1015" y="278" text-anchor="middle" dominant-baseline="central" font-size="16" font-weight="700" fill="#ffffff">Flutter</text>
+</svg>
