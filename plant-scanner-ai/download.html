@@ -24,66 +24,96 @@
   <style>
     :root{
       --g:#18934D;--gd:#0d6e39;--gl:#e6f5ec;--white:#ffffff;
-      --text:#111827;--muted:#6b7280;--r:20px;
-      --shadow:0 4px 24px rgba(24,147,77,.12);
-      --shadow-lg:0 16px 56px rgba(24,147,77,.22);
+      --text:#111827;--muted:#6b7280;
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{-webkit-font-smoothing:antialiased}
     body{
-      font-family:'Montserrat',sans-serif;background:var(--white);
-      color:var(--text);min-height:100vh;
-      display:flex;flex-direction:column;align-items:center;
-      justify-content:center;padding:40px 20px;
+      font-family:'Montserrat',sans-serif;
+      background:#f3faf6;
+      min-height:100vh;
+      display:flex;flex-direction:column;
+      align-items:center;justify-content:center;
+      padding:40px 20px;
     }
 
-    .card{
-      background:#fff;border-radius:28px;
-      box-shadow:var(--shadow-lg);
-      padding:48px 40px;max-width:480px;width:100%;
-      text-align:center;
+    /* ── exact card from index.html ── */
+    .dl-wrap{
+      max-width:760px;width:100%;margin:0 auto;
+      background:linear-gradient(140deg,var(--g) 0%,var(--gd) 100%);
+      border-radius:28px;padding:64px 48px;
+      text-align:center;position:relative;overflow:hidden;
+      box-shadow:0 32px 96px rgba(24,147,77,.32);
     }
-    .logo{width:88px;height:88px;border-radius:22px;margin:0 auto 24px;display:block;}
-    h1{font-size:1.6rem;font-weight:800;color:var(--text);line-height:1.25;margin-bottom:12px;}
-    .sub{font-size:1rem;color:var(--muted);margin-bottom:32px;line-height:1.6;}
-
-    .badges{display:flex;flex-direction:column;gap:14px;align-items:center;}
+    .dl-wrap::before{
+      content:'';position:absolute;
+      width:320px;height:320px;border-radius:50%;
+      background:rgba(255,255,255,.06);top:-100px;right:-80px;
+    }
+    .dl-wrap::after{
+      content:'';position:absolute;
+      width:200px;height:200px;border-radius:50%;
+      background:rgba(255,255,255,.04);bottom:-60px;left:-50px;
+    }
+    .dl-logo{
+      width:88px;height:88px;border-radius:22px;
+      object-fit:cover;margin:0 auto 24px;
+      box-shadow:0 10px 32px rgba(0,0,0,.22);
+      display:block;position:relative;z-index:1;
+    }
+    .dl-wrap h1{
+      font-size:clamp(26px,4vw,40px);font-weight:900;
+      color:#fff;margin-bottom:10px;letter-spacing:-.8px;
+      position:relative;z-index:1;
+    }
+    .dl-sub{
+      font-size:16px;color:rgba(255,255,255,.78);
+      font-weight:500;margin-bottom:36px;line-height:1.6;
+      position:relative;z-index:1;
+    }
+    .dl-btns{
+      display:flex;gap:14px;justify-content:center;flex-wrap:wrap;
+      position:relative;z-index:1;
+    }
     .dl-btn{
-      display:flex;align-items:center;gap:14px;
-      background:#000;color:#fff;border:none;cursor:pointer;
-      border-radius:14px;padding:14px 28px;width:220px;
-      text-decoration:none;transition:transform .15s,box-shadow .15s;
+      display:inline-flex;align-items:center;gap:11px;
+      background:#000;color:#fff;
+      padding:0 20px;border-radius:13px;
+      min-width:194px;height:64px;
+      font-family:'Montserrat',sans-serif;cursor:pointer;
+      border:1px solid rgba(255,255,255,.22);
+      box-shadow:0 8px 24px rgba(0,0,0,.28);
+      transition:transform .2s,box-shadow .2s,opacity .2s;
+      text-decoration:none;
     }
-    .dl-btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.25);}
-    .dl-btn svg{width:28px;height:28px;flex-shrink:0;}
-    .dl-btn-text{text-align:left;}
-    .dl-btn-sub{font-size:.65rem;font-weight:600;letter-spacing:.06em;opacity:.8;text-transform:uppercase;}
-    .dl-btn-name{font-size:1.05rem;font-weight:700;line-height:1.2;}
-    .dl-btn.soon{background:#e5e7eb;color:#9ca3af;cursor:default;}
-    .dl-btn.soon:hover{transform:none;box-shadow:none;}
+    .dl-btn:hover{transform:translateY(-3px);box-shadow:0 14px 38px rgba(0,0,0,.36)}
+    .dl-btn svg{width:28px;height:28px;flex-shrink:0}
+    .dl-btn-text{text-align:left;line-height:1.12}
+    .dl-btn-sub{font-size:11px;font-weight:500;color:#fff;letter-spacing:.3px;opacity:.95}
+    .dl-btn-name{font-size:19px;font-weight:700;color:#fff;letter-spacing:.2px;margin-top:1px}
+    .dl-btn.soon{opacity:.6}
 
-    .features{
-      display:flex;flex-wrap:wrap;gap:10px;justify-content:center;
-      margin-top:32px;
+    .back{
+      margin-top:24px;font-size:.82rem;color:rgba(0,0,0,.45);
+      position:relative;z-index:1;
     }
-    .pill{
-      background:var(--gl);color:var(--g);
-      border-radius:999px;padding:6px 16px;
-      font-size:.8rem;font-weight:700;
-    }
+    .back a{color:var(--g);font-weight:600;text-decoration:none;}
+    .back a:hover{text-decoration:underline;}
 
-    .back{display:block;margin-top:32px;font-size:.85rem;color:var(--muted);}
-    .back a{color:var(--g);font-weight:600;}
+    @media(max-width:520px){
+      .dl-wrap{padding:48px 28px}
+      .dl-btns{flex-direction:column;align-items:center}
+    }
   </style>
 </head>
 <body>
 
-  <div class="card">
-    <img src="logo.png" class="logo" alt="Plant Disease Care Identifier icon"/>
-    <h1>Download Plant Disease Care Identifier</h1>
-    <p class="sub">Identify plant diseases, get AI care guides and toxicity warnings for 30,000+ species — free.</p>
+  <div class="dl-wrap">
+    <img src="logo.png" class="dl-logo" alt="Plant Disease Care Identifier"/>
+    <h1>Download Free Today</h1>
+    <p class="dl-sub">Identify plant diseases, get care guides and toxicity info — free for everyone.</p>
+    <div class="dl-btns">
 
-    <div class="badges">
       <a href="https://play.google.com/store/apps/details?id=tech.khusheel.plantscanner"
          class="dl-btn" aria-label="Get it on Google Play">
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -98,28 +128,20 @@
         </div>
       </a>
 
-      <div class="dl-btn soon" aria-label="App Store — coming soon">
+      <button class="dl-btn soon" onclick="alert('Coming soon on the App Store!')" aria-label="Coming soon on the App Store">
         <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path fill="#9ca3af" d="M17.05,12.04C17.04,10.31 18.16,9.16 18.84,8.55C17.95,7.27 16.62,7.06 16.16,7.04C15.05,6.92 13.97,7.7 13.41,7.7C12.84,7.7 11.96,7.05 11.03,7.07C9.83,7.09 8.73,7.78 8.12,8.86C6.86,11.05 7.81,14.29 9.03,16.07C9.63,16.94 10.34,17.92 11.27,17.88C12.17,17.84 12.5,17.3 13.59,17.3C14.67,17.3 14.97,17.88 15.92,17.86C16.89,17.84 17.5,16.97 18.09,16.1C18.79,15.1 19.08,14.12 19.09,14.07C19.07,14.06 17.06,13.29 17.05,12.04M15.29,5.87C15.79,5.27 16.12,4.45 16.03,3.62C15.32,3.65 14.46,4.09 13.95,4.69C13.49,5.22 13.09,6.06 13.19,6.86C13.99,6.92 14.79,6.46 15.29,5.87Z"/>
+          <path fill="#fff" d="M17.05,12.04C17.04,10.31 18.16,9.16 18.84,8.55C17.95,7.27 16.62,7.06 16.16,7.04C15.05,6.92 13.97,7.7 13.41,7.7C12.84,7.7 11.96,7.05 11.03,7.07C9.83,7.09 8.73,7.78 8.12,8.86C6.86,11.05 7.81,14.29 9.03,16.07C9.63,16.94 10.34,17.92 11.27,17.88C12.17,17.84 12.5,17.3 13.59,17.3C14.67,17.3 14.97,17.88 15.92,17.86C16.89,17.84 17.5,16.97 18.09,16.1C18.79,15.1 19.08,14.12 19.09,14.07C19.07,14.06 17.06,13.29 17.05,12.04M15.29,5.87C15.79,5.27 16.12,4.45 16.03,3.62C15.32,3.65 14.46,4.09 13.95,4.69C13.49,5.22 13.09,6.06 13.19,6.86C13.99,6.92 14.79,6.46 15.29,5.87Z"/>
         </svg>
         <div class="dl-btn-text">
           <div class="dl-btn-sub">Coming soon on the</div>
           <div class="dl-btn-name">App Store</div>
         </div>
-      </div>
-    </div>
+      </button>
 
-    <div class="features">
-      <span class="pill">30,000+ species</span>
-      <span class="pill">Disease detection</span>
-      <span class="pill">Toxicity alerts</span>
-      <span class="pill">Care guides</span>
-      <span class="pill">PDF export</span>
-      <span class="pill">Free</span>
     </div>
-
-    <p class="back">← <a href="/plant-scanner-ai/">Back to app page</a></p>
   </div>
+
+  <p class="back">← <a href="/plant-scanner-ai/">Back to app page</a></p>
 
 </body>
 </html>
