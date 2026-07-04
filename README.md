@@ -16,8 +16,10 @@ via GitHub Pages.
 │   ├── icons/              # favicon.svg, favicon-32.png, apple-touch-icon.png
 │   ├── logo/               # Brand logo (KT) — SVG master + 1024/512/192 PNG
 │   └── social/             # Open Graph / Twitter share card (1200×630)
-└── plant-scanner-ai/       # App page + privacy policy
-    ├── index.html
-    ├── logo.png
-    └── privacy.html
+├── goo-lens-plant-identifier/   # App page + privacy policy (current)
+│   ├── index.html
+│   ├── download.html
+│   ├── logo.png
+│   └── privacy.html
+└── plant-scanner-ai/       # Legacy redirects → goo-lens-plant-identifier/
 ```
