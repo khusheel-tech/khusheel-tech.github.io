@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "tech.khusheel.plantscanner",
+      "sha256_cert_fingerprints": [
+        "41:D5:DE:03:FA:D2:4F:91:74:7F:BE:89:5F:DB:70:60:E4:17:C9:73:07:87:97:A1:A0:70:22:BB:D6:6A:7B:27"
+      ]
+    }
+  }
+]
