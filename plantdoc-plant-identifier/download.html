@@ -9,14 +9,14 @@
 
   <meta property="og:title" content="Download PlantDoc — Plant Identifier — Free on Android"/>
   <meta property="og:description" content="Identify plant diseases, get AI care guides and toxicity warnings for 30,000+ species. Free on Android."/>
-  <meta property="og:image" content="https://khusheel-tech.github.io/plantdoc-plant-identifier/logo.png"/>
+  <meta property="og:image" content="https://khusheel-tech.github.io/assets/social/og-card.png"/>
   <meta property="og:url" content="https://khusheel-tech.github.io/plantdoc-plant-identifier/download.html"/>
   <meta property="og:type" content="website"/>
   <meta property="og:site_name" content="Khusheel Tech"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Download PlantDoc — Plant Identifier — Free on Android"/>
   <meta name="twitter:description" content="Point your camera at any plant — get the name, disease diagnosis & full care guide. 30,000+ species. Free."/>
-  <meta name="twitter:image" content="https://khusheel-tech.github.io/plantdoc-plant-identifier/logo.png"/>
+  <meta name="twitter:image" content="https://khusheel-tech.github.io/assets/social/og-card.png"/>
 
   <link rel="canonical" href="https://khusheel-tech.github.io/plantdoc-plant-identifier/download.html"/>
   <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg"/>
@@ -133,7 +133,7 @@
         </div>
       </a>
 
-      <button class="dl-btn soon" onclick="alert('Coming soon on the App Store!')" aria-label="Coming soon on the App Store">
+      <button class="dl-btn soon" onclick="showToast('iOS App Store coming soon!')" aria-label="Coming soon on the App Store">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path fill="#fff" d="M17.05,12.04C17.04,10.31 18.16,9.16 18.84,8.55C17.95,7.27 16.62,7.06 16.16,7.04C15.05,6.92 13.97,7.7 13.41,7.7C12.84,7.7 11.96,7.05 11.03,7.07C9.83,7.09 8.73,7.78 8.12,8.86C6.86,11.05 7.81,14.29 9.03,16.07C9.63,16.94 10.34,17.92 11.27,17.88C12.17,17.84 12.5,17.3 13.59,17.3C14.67,17.3 14.97,17.88 15.92,17.86C16.89,17.84 17.5,16.97 18.09,16.1C18.79,15.1 19.08,14.12 19.09,14.07C19.07,14.06 17.06,13.29 17.05,12.04M15.29,5.87C15.79,5.27 16.12,4.45 16.03,3.62C15.32,3.65 14.46,4.09 13.95,4.69C13.49,5.22 13.09,6.06 13.19,6.86C13.99,6.92 14.79,6.46 15.29,5.87Z"/>
         </svg>
@@ -147,6 +147,19 @@
   </div>
 
   <p class="back">← <a href="/plantdoc-plant-identifier/">Back to app page</a></p>
+
+  <div id="toast" style="display:none;position:fixed;bottom:32px;left:50%;transform:translateX(-50%);background:#18934D;color:#fff;padding:12px 24px;border-radius:24px;font-family:inherit;font-size:14px;font-weight:600;box-shadow:0 4px 16px rgba(0,0,0,0.18);z-index:9999;white-space:nowrap;"></div>
+
+  <script>
+    function showToast(msg) {
+      var t = document.getElementById('toast');
+      t.textContent = msg;
+      t.style.display = 'block';
+      t.style.opacity = '1';
+      clearTimeout(t._tid);
+      t._tid = setTimeout(function(){ t.style.display = 'none'; }, 3000);
+    }
+  </script>
 
 </body>
 </html>
