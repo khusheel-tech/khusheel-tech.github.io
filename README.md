@@ -16,9 +16,15 @@ via GitHub Pages.
 │   ├── icons/              # favicon.svg, favicon-32.png, apple-touch-icon.png
 │   ├── logo/               # Brand logo (KT) — SVG master + 1024/512/192 PNG
 │   └── social/             # Open Graph / Twitter share card (1200×630)
-└── plantdoc-plant-disease-care/   # App page + privacy policy (current)
-    ├── index.html
-    ├── download.html
-    ├── logo.png
-    └── privacy.html
+├── sprigly/                 # App page + privacy policy (current)
+│   ├── index.html
+│   ├── download.html
+│   ├── logo.png
+│   └── privacy.html
+├── plantdoc/                # Legacy redirect stub → /sprigly/ (kept
+│                             # indefinitely — may still be filed as the
+│                             # privacy-policy URL with Google Play / App
+│                             # Store Connect on the live published app)
+└── plantdoc-plant-disease-care/   # Older legacy redirect stub → /sprigly/
+                                    # (same reason, one rebrand further back)
 ```
