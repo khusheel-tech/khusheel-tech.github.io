@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Only canonical URLs are listed. The legacy /plantdoc-plant-disease-care/
-     and /plantdoc/ paths still resolve (redirect stubs) but are marked
-     noindex, so they are deliberately excluded here. -->
+<!-- Only canonical URLs are listed. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://khusheel-tech.github.io/</loc>
